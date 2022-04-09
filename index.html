@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" lang="fr">
+    <title>Moulinsard</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiCQSli5n6rsT19Ur309d3sG4_keLm2to&callback=initMap&v=weekly"
+            async
+    ></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Insérer le code HTML de la page *en-dessous* de cette ligne -->
+
+    <section id="accueil" class="page">
+        <nav class="navbar">
+            <ul>
+                <!-- Barre de navigation à compléter -->
+                <li>
+                    <a href="#decouvrir">Découvrir</a>
+                    <p class="additional">L'histoire du Château</p>
+                </li>
+                <li>
+                    <a href="#actu">Actualité</a>
+                    <p class="additional">Expositions &amp; événements</p>
+                </li>
+                <li>
+                    <a href="#visites">Visites</a>
+                    <p class="additional">Informations pratiques</p>
+                </li>
+            </ul>
+        </nav>
+
+        <h1>Le chateau de Moulinsard</h1>
+        <p>
+            Un luxe intemporel vous attend
+        </p>
+    </section>
+    <section id="decouvrir" class="page">
+        <h1>Découvrir</h1>
+        <p>
+            Le château de Moulinsart est situé dans la localité fictive éponyme, et imaginé par Hergé pour sa série de bande dessinée Les Aventures de Tintin. Tintin y est l'hôte du capitaine Haddock à la fin de la série. C’est dans l’album Le Secret de
+            La Licorne que le château apparaît pour la première fois. Tintin découvre d'abord de vastes souterrains où il est retenu prisonnier. Des fouilles
+            archéologiques dans les cryptes romanes de Nivelles et de l'abbaye Saint-Martin de Tournai sont peut-être une source d'inspiration des lieux dessinés par Hergé. Ces sites se trouvent dans la région où furent établis les Mérovingiens,
+            dont le Professeur Tournesol cherche un de leurs tombeaux dans le parc de Moulinsart. Ces caves servent de dépôt d'antiquités. Pour dessiner les pièces accumulées, Hergé emprunte aux gravures publiées dans l'encyclopédie Larousse.
+            Il en fera de même pour dessiner l'ameublement intérieur du château, mêlant les différentes époques...
+        </p>
+    </section>
+    <section id="actu" class="page">
+        <h1>Actualité</h1>
+        <div id="grid-container">
+
+        </div>
+    </section>
+    <section id="visites" class="page">
+        <h1>Visites</h1>
+        <div id="contenu-visites">
+            <ul>
+                <li>Le Château est ouvert tous les jours sauf le lundi, de 9h à 18h.</li>
+                <li>Ouverts tous les jours, le Parc et les jardins sont gratuits <br>(les jours de Grandes Eaux, accès aux Jardins payant)</li>
+                <li>
+                    <p>Château de Moulinsart</p>
+                    <p>Boulevard Hergé</p>
+                    <p>01234 Moulinsart</p>
+                    <p><a href="mailto:contact@chateau-moulinsart.fr">contact@chateau-moulinsart.fr</a></p>
+                    <p><a href="tel:0123456789">01 23 45 67 89</a></p>
+                </li>
+            </ul>
+            <div id="carte">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Insérer le code HTML de la page *au-dessus* de cette ligne -->
+
+    <template id="my_template">
+        <div class="grid-item">
+            <img src="images/{{actu-image}}.jpg">
+            <div class="inner">
+                <h2>{{actu-titre}}</h2>
+                <p>
+                    {{actu-texte}}
+                </p>
+                <a>{{actu-bouton}}</a>
+            </div>
+        </div>
+    </template>
+    <button onclick="topFunction()" id="myBtn">▲</button>
+</body>
+
+</html>
